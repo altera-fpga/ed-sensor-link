@@ -28,4 +28,4 @@ The FPGA implementation organized as the Platform Designer subsystems of the Qua
 
 ---
 
-[← Scope](02-scope.md) | [Documentation index](README.md) | [Deliverables →](04-deliverables.md)
+[← Scope](02-scope.md) | [Documentation index](README.md) | [Bill of Materials →](04-bill-of-materials.md)

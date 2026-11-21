@@ -1,4 +1,6 @@
-# Getting Started
+# Getting Started: Hardware Connection
+
+This is part 1 of 3 of Getting Started: [Hardware Connection](05-getting-started-1-hardware-connection.md), [Configure the Board](05-getting-started-2-configure-the-board.md), [Execute the Control Plane](05-getting-started-3-execute-the-control-plane.md).
 
 ## Hardware Configurations
 
@@ -92,51 +94,6 @@ The lidar cables must be reworked to connect to the 2x4-pin GPIO connector on th
 
 Connections from RPLIDAR to HVIO 2 × 4 Header (in the images: Blue (Lidar GND, Pin 7), Orange (Lidar TX / Board RX, Pin 2), Green (Lidar RX / Board TX, Pin 4).
 
-## Run PTP in the host interface
-
-Before programming the board, run PTP in your host device as a master. FPGA internal PTP engine only supports “secondary/slave” mode.
-
-## Configure the board
-
-Once all connections are ready according to the selected hardware configuration and SOF, follow these steps:
-
-1. Get "Quartus Programmer 26.1" from:  <https://www.altera.com/downloads/fpga-development-tools/quartus-prime-pro-edition-design-software-version-26-1-windows>, from "Standalone Software Section".  Specifically <https://www.altera.com/download-center/license-agreement/127231/4e7f616c20e1954783e8d9971c0503cab69483c6?filename=QuartusProProgrammerSetup-26.1.0.110-windows.exe>
-2. Power on the lidar(s) and the Framos GMSL module first. **This step is important!**
-3. Turn on the development kit.
-4. Open the Programmer, click Hardware Setup, select `Agilex_5E` MDK Carrier [USB-1], and close the dialog.
-
-    ![Programmer hardware setup](images/figure-13-programmer-hardware-setup.png)
-
-    *Figure 13. Programmer hardware setup.*
-
-5. In the main window, click Auto Detect. The device should appear in the JTAG chain as A5ED065BB32AR0 /A5ED065BB32AE4S. Select it, choose Change File, select the SOF, and make sure Program/Configure is enabled.
-
-    ![Programming the board](images/figure-14-programming-the-board.png)
-
-    *Figure 14. Programming the board.*
-
-6. Click Program. No RoCEv2 packets are expected, you need to use the control plane to start the stream.
-
-## Execute the control plane
-
-Once the FPGA is programmed with the SOF, execute the control plane program. If using the example you should see (you must compile, in a host machine the provided **`altera-control-link_*.*.*.tar.gz`** ):
-
-![Altera Control Link Execution](images/figure-15-altera-control-link-execution.png)
-
-*Figure 15. Altera Control Link Execution.*
-
-After this you must see UDP transaction packets, for example in Wireshark:
-
-![Altera Control Link UDP packets](images/figure-16-altera-control-link-udp-packets.png)
-
-*Figure 16. Altera Control Link UDP packets.*
-
-After configuration is done, then you can see the RoCE packets
-
-![Streaming after FPGA configuration](images/figure-17-streaming-after-fpga-configuration.png)
-
-*Figure 17. Streaming after FPGA configuration.*
-
 ---
 
-[← Deliverables](04-deliverables.md) | [Documentation index](README.md) | [Data Formats →](06-data-formats.md)
+[← Bill of Materials](04-bill-of-materials.md) | [Documentation index](README.md) | [Getting Started: Configure the Board →](05-getting-started-2-configure-the-board.md)

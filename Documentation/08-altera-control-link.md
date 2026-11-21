@@ -10,7 +10,7 @@ After the network is up, the firmware starts the register server and an interrup
 
 The control server listens on UDP port 5005. Each request names a base address and a byte offset, using the Control Nios addresses in [Appendix A](appendix-a-control-memory-map.md). A read returns the 32-bit value at that address. A write stores the value in the request. The offset must be a multiple of 4. One datagram may carry several requests, up to 32, and the reply contains one response for each of them. A third operation registers an interrupt: the Nios then sends a notification to UDP port 5006 on the host that issued the request.
 
-For more details, see the Readme file in the control link library.
+For more details, see the README in the [host-control-library](https://github.com/altera-fpga/host-control-library) repository.
 
 ## UDP Transport
 

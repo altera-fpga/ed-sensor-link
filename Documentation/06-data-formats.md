@@ -107,4 +107,4 @@ The end of each video frame, lidar, Point-Cloud or IMU reading is identified by 
 
 ---
 
-[← Getting Started](05-getting-started.md) | [Documentation index](README.md) | [FPGA System Description →](07-fpga-system-description.md)
+[← Getting Started: Execute the Control Plane](05-getting-started-3-execute-the-control-plane.md) | [Documentation index](README.md) | [FPGA System Description →](07-fpga-system-description.md)

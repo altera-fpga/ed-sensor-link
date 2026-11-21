@@ -11,8 +11,10 @@ Altera® Sensor Link is an edge platform that ingests camera, lidar, and IMU dat
 | [Introduction](01-introduction.md) | What the Sensor Link is and what this release delivers |
 | [Scope](02-scope.md) | What is in and out of scope |
 | [Architecture](03-architecture.md) | End-to-end data path and the functional block diagrams |
-| [Deliverables](04-deliverables.md) | Bill of materials, the provided SOF files, and the host control library |
-| [Getting Started](05-getting-started.md) | Wiring, PTP, programming the board, and starting the streams |
+| [Bill of Materials](04-bill-of-materials.md) | Equipment needed to run this release (the SOF files and a link to the host control library are in the [top-level README](../README.md#provided-sof)) |
+| [Getting Started: Hardware Connection](05-getting-started-1-hardware-connection.md) | Hardware configurations, sensor wiring, and the lidar cable re-work |
+| [Getting Started: Configure the Board](05-getting-started-2-configure-the-board.md) | Running PTP on the host and programming the SOF |
+| [Getting Started: Execute the Control Plane](05-getting-started-3-execute-the-control-plane.md) | Running the Altera Control Link and starting the streams |
 | [Data Formats](06-data-formats.md) | RoCEv2 stream layout for video, 2D lidar, 3D lidar, and IMU, plus the timestamp format |
 | [FPGA System Description](07-fpga-system-description.md) | Platform Designer subsystems and how they connect |
 | [Altera Control Link](08-altera-control-link.md) | The UDP register-access protocol and the host configuration sequence |

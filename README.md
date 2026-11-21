@@ -1,8 +1,4 @@
-# ed-sensor-link
-
-Sensor Link System Example Designs
-
-## Altera® Sensor Link
+# Altera® Sensor Link
 
 Altera® Sensor Link is an edge platform that brings several sensors into one Agilex™ 5 FPGA and delivers them to a host over a 10 GbE link as separate RoCEv2 streams. Data is tagged with a common IEEE 1588 96-bit timestamp, and a UDP-based library (Altera Control Link) lets the host read and write any IP register in the design.
 
@@ -10,7 +6,7 @@ Altera® Sensor Link is an edge platform that brings several sensors into one Ag
 
 > This release is a proof of concept. It is not a production-ready solution.
 
-### Streams
+## Streams
 
 | Queue pair | Stream | Source |
 | --- | --- | --- |
@@ -22,7 +18,7 @@ Altera® Sensor Link is an edge platform that brings several sensors into one Ag
 
 The transport is unidirectional RoCEv2 (Unreliable Connection) from the FPGA to the host.
 
-### Hardware
+## Hardware
 
 - Agilex 5 FPGA and SoC E-Series Modular Development Kit (ES or 065B production device)
 - Two Framos FSM:GO IMX678C camera modules (MIPI0 can use an optional Framos GMSL3 module)
@@ -32,7 +28,7 @@ The transport is unidirectional RoCEv2 (Unreliable Connection) from the FPGA to 
 
 The full bill of materials is in [Deliverables](Documentation/04-deliverables.md).
 
-### Quick start
+## Quick start
 
 1. Wire the sensors as described in [Getting Started](Documentation/05-getting-started.md).
 2. Run PTP on the host as a master. The FPGA PTP engine supports secondary mode only.
@@ -41,7 +37,7 @@ The full bill of materials is in [Deliverables](Documentation/04-deliverables.md
 5. Build and run the Altera Control Link example on the host. No RoCEv2 packets are sent until the host configures the FPGA.
 6. Capture the RoCEv2 stream on the host, for example with Wireshark.
 
-### Documentation
+## Documentation
 
 The full documentation is in the [Documentation](Documentation/README.md) folder.
 

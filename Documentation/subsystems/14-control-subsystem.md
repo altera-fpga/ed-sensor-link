@@ -37,4 +37,4 @@ PTP initialization is enabled in this firmware. It runs at startup and programs 
 
 ---
 
-[← 10G Ethernet Subsystem](13-10g-ethernet-subsystem.md) | [Documentation index](../README.md) | [Altera® Control Link →](../09-altera-control-link.md)
+[← 10G Ethernet Subsystem](13-10g-ethernet-subsystem.md) | [Documentation index](../README.md) | [Altera® Host Control Library →](../09-altera-host-control.md)

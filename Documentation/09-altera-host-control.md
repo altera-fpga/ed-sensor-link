@@ -1,6 +1,6 @@
-# Altera® Control Link
+# Altera® Host Control Library
 
-Altera® Control Link is a C library for reading and writing memory-mapped registers over pluggable transports including UDP. C++ and Python bindings are also available.
+Altera® Host Control Library is a C library for reading and writing memory-mapped registers over pluggable transports including UDP. C++ and Python bindings are also available.
 
 The Control Subsystem does not configure the cameras, the video pipeline, the OmniRoCEv2 IP, or the RoCEv2 streams at boot. An x86 host does that work. The host sends UDP messages across the 10G link on the non-RoCE path. The Control Subsystem receives them and reads or writes any Avalon-MM slave attached to it. That is how this system is configured.
 
@@ -40,7 +40,7 @@ The UDP v1 packet structure is defined as follows:
 
 ## Host configuration
 
-The host program is `altera-control-link`. The application is in `main.cpp`. It opens a UDP register transport to 192.168.1.101 port 5005 and uses the library drivers for I2C, the Video and Vision Processing IP, the OmniRoCEv2 IP, and the Altera® Sensor Link Stream Multiplexer. Every access below is a UDP read or write of the kind defined in the packet format.
+An example application can be found in [host-examples](host-examples/mdk_dual_cam_lidar_example.cpp). The application opens a UDP register transport to 192.168.1.101 port 5005 and uses the library drivers for I2C, the Video and Vision Processing IP, the OmniRoCEv2 IP, and the Altera® Sensor Link Stream Multiplexer. Every access below is a UDP read or write of the kind defined in the packet format.
 
 The application configures the board in this order.
 

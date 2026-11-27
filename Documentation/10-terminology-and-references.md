@@ -70,4 +70,4 @@
 
 ---
 
-[← Altera® Control Link](09-altera-control-link.md) | [Documentation index](README.md) | [Appendix A: Control Subsystem Memory Map →](appendix-a-control-memory-map.md)
+[← Altera® Host Control Library](09-altera-host-control.md) | [Documentation index](README.md) | [Appendix A: Control Subsystem Memory Map →](appendix-a-control-memory-map.md)

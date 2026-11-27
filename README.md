@@ -1,6 +1,6 @@
 # Altera® Sensor Link
 
-Altera® Sensor Link is an edge platform that brings several sensors into one Agilex™ 5 FPGA and delivers them to a host over a 10 GbE link as separate RoCEv2 streams. Data is tagged with a common IEEE 1588 96-bit timestamp, and a UDP-based library (Altera® Control Link) lets the host read and write any IP register in the design.
+Altera® Sensor Link is an edge platform that brings several sensors into one Agilex™ 5 FPGA and delivers them to a host over a high-speed network link as separate RoCEv2 streams. Data is tagged with a common IEEE 1588 96-bit timestamp, and a UDP-based control plane, provided by the Altera® Host Control library, allows the host to read and write any IP register in the design.
 
 ![Altera® Sensor Link functional block diagram](Documentation/images/figure-01-altera-sensor-link-functional-block-diagram.png)
 
@@ -35,7 +35,7 @@ The SOF files are published on the [BIN_REL_1_0 release](https://github.com/alte
 
 ## Altera® Host Control Library
 
-The Altera® Host Control Library is published in its own repository: [altera-fpga/host-control-library](https://github.com/altera-fpga/host-control-library). Use a version compatible with the hardware implemented by the SOFs listed above. It serves as the base layer for initializing and configuring the FPGA IP exposed through the control plane.
+The Altera® Host Control Library is published in its own repository: [altera-fpga/host-control-library](https://github.com/altera-fpga/host-control-library). This library is used for initializing and configuring the FPGA IP exposed through the control plane. You can find example host applications to support the SOFs listed above in [`host-examples`](host-examples).
 
 ## Quick start
 
@@ -45,8 +45,7 @@ The Altera® Host Control Library is published in its own repository: [altera-fp
 1. Wire the sensors as described in [Getting Started: Hardware Connection](Documentation/04-getting-started-1-hardware-connection.md).
 2. Power on the lidar and the GMSL module, then the development kit.
 3. Program the SOF that matches your board with Quartus Programmer 26.1. See [Getting Started: Configure the Board](Documentation/05-getting-started-2-configure-the-board.md).
-4. Build and run the Altera® Control Link example from the [host-control-library](https://github.com/altera-fpga/host-control-library) repository on the host. No RoCEv2 packets are sent until the host configures the FPGA. See [Getting Started: Execute the Control Plane](Documentation/06-getting-started-3-execute-the-control-plane.md).
-5. Capture the RoCEv2 stream on the host, for example with Wireshark. The expected output is shown at the end of [Execute the Control Plane](Documentation/06-getting-started-3-execute-the-control-plane.md).
+4. Build and run the corresponding Altera® Host Control example application from the [host-examples](host-examples) directory. No RoCEv2 packets are sent until the host configures the FPGA. See [Getting Started: Execute the Control Plane](Documentation/06-getting-started-3-execute-the-control-plane.md).
 
 ## Streams in this Reference Design
 
@@ -77,7 +76,7 @@ The full documentation is in the [Documentation](Documentation/README.md) folder
 - Getting Started: [Hardware Connection](Documentation/04-getting-started-1-hardware-connection.md), [Configure the Board](Documentation/05-getting-started-2-configure-the-board.md), [Execute the Control Plane](Documentation/06-getting-started-3-execute-the-control-plane.md)
 - [Data Formats](Documentation/07-data-formats.md)
 - [FPGA System Description](Documentation/08-fpga-system-description.md)
-- [Altera® Control Link](Documentation/09-altera-control-link.md)
+- [Altera® Host Control Library](Documentation/09-altera-host-control.md)
 - [Terminology and References](Documentation/10-terminology-and-references.md)
 - [Appendix A: Control Subsystem Memory Map](Documentation/appendix-a-control-memory-map.md)
 

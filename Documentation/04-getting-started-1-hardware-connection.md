@@ -52,32 +52,6 @@ The RPLIDAR is also connected to the J23 2x4-pin connector.
 
 Connections from the RPLIDAR to the HVIO 2 × 4 header (wire colors in the images: blue is lidar GND to pin 7, orange is lidar TX to board RX on pin 2, and green is lidar RX to board TX on pin 4).
 
-Note 1: To use the video test-pattern generators (TPG), you can disconnect the cameras from the MIPI ports. You must also change the internal video switch configuration in the Stream Switch Subsystem. The non-default configuration in the Altera® Control Link should look like this:
-
-<p align="center">
-  <img src="images/figure-07-hardware-configuration-2.png" alt="Hardware Configuration 2">
-</p>
-
-<p align="center"><strong>Figure 7. Hardware Configuration 2.</strong></p>
-
-<br>
-
-Note 2: To connect the MIPI0 camera without the GMSL module, you must disable the GMSL module in the Altera® Control Link initialization. The initialization should look like this:
-
-<p align="center">
-  <img src="images/mipi0-direct-camera-address.png" alt="Camera address constants with the GMSL addresses commented out">
-</p>
-
-Then comment out the GMSL module initialization:
-
-<p align="center">
-  <img src="images/mipi0-direct-camera-init.png" alt="Camera initialization with the GMSL module commented out">
-</p>
-
-<p align="center">
-  <img src="images/mipi0-gmsl-init-commented.png" alt="GMSL initialization block commented out">
-</p>
-
 ### Lidar cable rework
 
 The lidar cables must be reworked to connect to the 2x4-pin GPIO connector on the development kit. Follow the steps below.

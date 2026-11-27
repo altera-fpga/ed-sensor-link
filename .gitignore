@@ -1,0 +1,4 @@
+build*/
+host-control-library/
+.codesight/
+.vscode/

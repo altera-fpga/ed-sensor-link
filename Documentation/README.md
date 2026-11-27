@@ -16,10 +16,10 @@ Altera® Sensor Link is an edge platform that ingests camera, lidar, and IMU dat
     <tr><td><a href="03-bill-of-materials.md">Bill of Materials</a></td><td>Equipment needed to run this release (the SOF files and a link to the host control library are in the <a href="../README.md#provided-fpga-binaries-sof">top-level README</a>)</td></tr>
     <tr><td><a href="04-getting-started-1-hardware-connection.md">Getting Started: Hardware Connection</a></td><td>Hardware configurations, sensor wiring, and the lidar cable rework</td></tr>
     <tr><td><a href="05-getting-started-2-configure-the-board.md">Getting Started: Configure the Board</a></td><td>Programming the SOF</td></tr>
-    <tr><td><a href="06-getting-started-3-execute-the-control-plane.md">Getting Started: Execute the Control Plane</a></td><td>Running the Altera® Control Link and starting the streams</td></tr>
+    <tr><td><a href="06-getting-started-3-execute-the-control-plane.md">Getting Started: Execute the Control Plane</a></td><td>Running the Altera® Host Control Library and starting the streams</td></tr>
     <tr><td><a href="07-data-formats.md">Data Formats</a></td><td>RoCEv2 stream layout for video, 2D lidar, 3D lidar, and IMU, plus the timestamp format</td></tr>
     <tr><td><a href="08-fpga-system-description.md">FPGA System Description</a></td><td>Platform Designer and/or Visual Designer Studio subsystems and how they connect</td></tr>
-    <tr><td><a href="09-altera-control-link.md">Altera® Control Link</a></td><td>The UDP register-access protocol and the host configuration sequence</td></tr>
+    <tr><td><a href="09-altera-host-control.md">Altera® Host Control Library</a></td><td>The UDP register-access protocol and the host configuration sequence</td></tr>
     <tr><td><a href="10-terminology-and-references.md">Terminology and References</a></td><td>Glossary and external references</td></tr>
     <tr><td><a href="appendix-a-control-memory-map.md">Appendix A: Control Subsystem Memory Map</a></td><td>Base addresses and register tables for every IP the host can reach</td></tr>
   </tbody>
